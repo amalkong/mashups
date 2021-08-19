@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/> -->
+		<link rel="stylesheet" href="http://localhost/www/_assets/css/font-awesome-5.11.2/css/all.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/movies.css" />
+		<title>Movie App</title>
+	</head>
+	<body>
+		<aside id="main-sidebar" class="sidebar left">
+			<button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
+			<nav id="navbar">
+				<div class="logo"><img src="http://localhost/www/_assets/img/avatar.jpg" alt="user" /></div>
+				<ul id="sidebar-list"></ul>
+			</nav>
+		</aside>
+		<main id="main" class="main snap-container">
+			<div class="container hero flex snap-section">
+				<header>
+					<h1>Movies App</h1>
+					<p>Down below is are a list of movies currently in theater as well as upcoming titles.</p>
+					<a class="cta-btn" href="#movies">View Listings</a>
+				</header>
+			</div>
+			<div id="movies" class="container flex flex--col movies snap-section overflow--auto">
+				<header>
+					<h2 id="category-display">Movie Listings</h2>
+					<form id="form">
+						<input type="text" id="search" class="search" placeholder="Search">
+					</form>
+				</header>
+
+				<div id="movies-main"></div>
+				
+				<footer id="footer">
+					<span id="pagination" class="pagination flex">
+						<span class="flex">
+							<button class="page prev-page" title="show previous page"><i class="fa fa-chevron-left"></i></button>
+							<form id="pagination-form"><input class="pagination__input" type="text" value="" title="enter page number"></form>
+							<button class="page next-page" title="show next page"><i class="fa fa-chevron-right"></i></button>
+						</span>
+						<span class="flex">
+							<select id="pagination__category" class="pagination__category">
+								<option value="tv">tv shows</option>
+								<option value="movie" selected>movie</option>
+							</select>
+						</span>
+					</span>
+					<span class="pagination__info flex flex--center">
+						<small id="total-pages"></small>
+						<span> / </span>
+						<small id="total-results"></small>
+					</span>
+				</footer>
+			</div>
+		</main>
+		<script src="./js/script.js"></script>
+		<script src="./js/movies.js"></script>
+	</body>
+</html>

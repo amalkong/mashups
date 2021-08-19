@@ -1,0 +1,188 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap'); */
+
+:root {
+	--modal-duration: 1s;
+	--primary-clr: #7bdaf3;
+	--primary-clr-alt: #7bdaf390;
+	--secondary-clr: #9ec862;
+	--border-clr: rgba(255, 255, 255, 0.1); 
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+	background-color: var(--primary-clr);
+	font-family: 'Poppins', sans-serif;
+	/* display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding-top: 3rem; */
+}
+nav {
+	background-color: var(--primary-clr);
+}
+nav ul li {
+    border-bottom: 2px solid var(--border-clr);
+    padding: 0px;
+}
+nav ul li:first-of-type {
+    border-top: 2px solid var(--border-clr);
+}
+nav ul li.active, nav ul li:hover {
+    background-color: var(--secondary-clr);
+}
+nav ul li.active a, nav ul li:hover a {
+    border-right-color: var(--border-clr);
+}
+.container.scrollable{
+	height: 100vh;
+	overflow: auto;
+}
+.control{
+	z-index: 9;
+	position: relative;
+	width: max-content;
+	height: max-content;
+	padding: 1em;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 3px;
+}
+.control.top{bottom: auto;top: 1rem;}
+.control.bottom{top: auto;bottom: 1rem;}
+.control.right{left: auto;right: 1rem;}
+.control.left{right: auto;left: 1rem;}
+.control.note-control{position: fixed;gap: .5em;}
+.add {
+	background-color: var(--secondary-clr);
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.add:active {
+	transform: scale(0.98);
+}
+
+.note {
+	background-color: #fff;
+	box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+	margin: 30px auto;
+	height: 400px;
+	width: 400px;
+	/* margin: 30px 20px;overflow-y: scroll; */
+	display: grid;
+	grid-template-rows: 2.5em 1fr;
+}
+.note .tools {
+	background-color: var(--secondary-clr);
+	display: flex;
+	justify-content: flex-end;
+	padding: 0.5rem;
+}
+
+.note .tools button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-left: 0.5rem;
+}
+
+.note .notepad {
+    height: initial;
+    overflow-y: scroll;
+}
+.note textarea {
+	outline: none;
+	font-family: inherit;
+	font-size: 1.2rem;
+	border: none;
+	height: 400px;
+	width: 100%;
+	padding: 20px;
+}
+
+.note-display {
+	padding: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+.todo {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo h1 {
+  color: rgb(179, 131, 226);
+  font-size: 10rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.todo form {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 400px;
+}
+
+.todo .input {
+  border: none;
+  color: #444;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  display: block;
+  width: 100%;
+}
+
+.todo .input::placeholder {
+  color: #d5d5d5;
+}
+
+.todo .input:focus {
+  outline-color: rgb(179, 131, 226);
+}
+
+.todo .todos {
+	max-height: 40vh;
+	overflow: auto;
+	background-color: #fff;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.todo .todos li {
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+  color: #444;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.todo .todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+.todo small {
+	margin-top: 3rem;
+	color: #b5b5b5;
+	font-size: small;
+	text-align: center;
+}
