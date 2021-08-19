@@ -1,6 +1,6 @@
 ## Traversy Media Mashups
 
-Thes are snippets and small projects from [traversymedia](https://github.com/bradtraversy)
+These are the snippets and small projects mashups from [@traversymedia](https://github.com/bradtraversy)
 
 ## Project Features
 
