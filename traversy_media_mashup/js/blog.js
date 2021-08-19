@@ -9,13 +9,11 @@ let page = 1;
 // Fetch posts from API
 async function getPosts() {
   const res = await fetch(
-    //`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
-    //`http://localhost/www/fake-api.php?ptf=social&api=twitter&ret=json&lmt=${limit}&_page=${page}`
-    `http://localhost/www/fake-api.php?ptf=blog&ret=json&lmt=${limit}&pg=${page}`
+    `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
   );
 
   const data = await res.json();
-  return data?.response?.posts;
+  return data;
 }
 
 // Show posts in DOM
