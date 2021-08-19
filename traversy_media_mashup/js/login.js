@@ -112,4 +112,3 @@ registerForm.addEventListener('submit', function(e) {
 		}
 	});
 });
-
