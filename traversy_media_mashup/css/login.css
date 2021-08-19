@@ -39,7 +39,9 @@ nav ul li.active, nav ul li:hover {
 	transition: transform var(--transition-speed) linear;
 }
 
-.form-wrapper.active {transform: scale(1);}
+.form-wrapper.active {
+	transform: scale(1);
+}
 
 .form-wrapper h1 {
 	text-align: center;
@@ -73,7 +75,6 @@ nav ul li.active, nav ul li:hover {
 }
 .container p:not(.hero p), .text {
 	margin-top: 30px;
-	/* color: #ddd;color: #dfb988; */
 	padding: 1rem;
 	background-color: var(--primary-clr-alt);
 	border-radius: 0;
@@ -82,7 +83,6 @@ nav ul li.active, nav ul li:hover {
 }
 .login--form .form-control {
 	position: relative;
-	/* margin: 20px 0 40px; */
 	margin: 10px 0;
 	width: 300px;
 }
@@ -125,77 +125,81 @@ nav ul li.active, nav ul li:hover {
 }
 
 .background {
-  /* background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover; */
-  background: url('http://localhost/www/_assets/img/wallpaper-samurai.jpg') no-repeat center center/cover;
-  position: absolute;
-  top: -20px;
-  bottom: -20px;
-  left: -20px;
-  right: -20px;
-  z-index: 1;
-  filter: blur(20px);
+	background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover;
+	position: absolute;
+	top: -20px;
+	bottom: -20px;
+	left: -20px;
+	right: -20px;
+	z-index: 1;
+	filter: blur(20px);
 }
 
 
 .form {
-  padding: 30px 40px;
+	padding: 30px 40px;
+}
+
+.register--form .form {
+	padding: 0 40px;
 }
 
 .register--form .form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
+	margin-bottom: 10px;
+	position: relative;
 }
 
 .register--form .form-control label {
-  color: #777;
-  display: block;
-  margin-bottom: 5px;
+	position: relative;
+	top: auto;
+	color: #777;
+	display: block;
+	margin-bottom: 5px;
 }
 
 .register--form .form-control input {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 14px;
 }
 
 .register--form .form-control input:focus {
-  outline: 0;
-  border-color: #777;
+	outline: 0;
+	border-color: #777;
 }
 
 .register--form .form-control.success input {
-  border-color: var(--success-color);
+	border-color: var(--success-color);
 }
 
 .register--form .form-control.error input {
-  border-color: var(--error-color);
+	border-color: var(--error-color);
 }
 
 .register--form .form-control small {
-  color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
+	color: var(--error-color);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
 }
 
 .register--form .form-control.error small {
-  visibility: visible;
+	visibility: visible;
 }
 
 .form button {
-  cursor: pointer;
-  background-color: #3498db;
-  border: 2px solid #3498db;
-  border-radius: 4px;
-  color: #fff;
-  display: block;
-  font-size: 16px;
-  padding: 10px;
-  margin-top: 20px;
-  width: 100%;
+	cursor: pointer;
+	background-color: #3498db;
+	border: 2px solid #3498db;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
 }
