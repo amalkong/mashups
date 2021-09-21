@@ -1,18 +1,14 @@
 ## Welcome to Amalkong Code-Mashups Projects
 
-This is a personal hobby of mine, where I tend to "code surf" <small>(for lack of a better word)</small>, and when I find useful code snippets or small projects, I usually try to build something from them.
+This is a personal hobby of mine, where I tend to "code surf" <small style="font-size:60%;">(for lack of a better word)</small>, and when I find useful code snippets or small projects, I usually try to build something from them.
 
 ## Mashups List
-- [Taversy Media](https://github.com/bradtraversy)
-- [Web Dev Simplified](https://github.com/webdevsimplified)
+- [Traversy Mashups](https://amalkong.github.io/mashups/traversy_media_mashup/) codes from [Taversy Media](https://github.com/bradtraversy)
+- [Web Dev Simplified Mashups](https://amalkong.github.io/mashups/web_dev_simplified_mashup) codes from [Web Dev Simplified](https://github.com/webdevsimplified)
 
 You can use the [editor on GitHub](https://github.com/amalkong/mashups/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
