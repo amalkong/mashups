@@ -338,6 +338,10 @@ a.cta-btn {
 	overflow-x:hidden;
 	scroll-behavior: smooth;
 }
+#main.snap-container{
+	width:100vw;
+	height:100vh;
+}
 .snap-container > .snap-container.y{
 	flex: 1 0 auto;
 	scroll-snap-align: start;
