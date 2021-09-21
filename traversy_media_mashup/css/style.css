@@ -36,7 +36,7 @@ body.show-nav #main-sidebar{
 	z-index: 1;
 	position: relative;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 	overflow: auto;
 	transition: all 0.3s ease;
@@ -403,5 +403,9 @@ input.visually-hidden:focus-within + label {outline:thin dotted;}
 	body.show-nav #main {
 	    left: 0;
 	    width: calc(100vw - 0px);
+	}
+	#main-sidebar .toggle {
+	    top: auto;
+	    bottom: 1em;
 	}
 }
