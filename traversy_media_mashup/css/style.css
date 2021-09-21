@@ -19,7 +19,7 @@ body {
 
 #main-sidebar {
 	z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 200px;
     height: 100vh;
