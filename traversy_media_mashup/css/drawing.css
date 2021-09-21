@@ -29,6 +29,9 @@ canvas {
 	border: 2px solid var(--primary-clr);
 	margin: auto;
 }
+a.cta-btn {
+    color: var(--primary-clr);
+}
 nav ul li.active a, nav ul li:hover a{color:#444;}
 #sketchpad{
 	position: relative;
@@ -117,4 +120,10 @@ nav ul li.active a, nav ul li:hover a{color:#444;}
 
 .toolbox > *:last-child {
 	margin-left: auto;
+}
+
+@media (max-width: 500px){
+	.canvas-kit {
+    		width: 100%;
+	}
 }
