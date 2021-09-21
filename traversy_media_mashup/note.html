@@ -10,24 +10,19 @@
 	</head>
 	<body>
 		<nav class="control note-control top right flex flex--col">
-			<button class="add" id="add"><i class="fas fa-plus"></i> Add note</button>
+			<a class="add" id="add" href="#notes-container"><i class="fas fa-plus"></i> Add note</a>
 			<button class="toggleScrollable" id="toggleScrollable"><i class="fas fa-atom"></i> scrollable?</button>
 		</nav>
 		<aside id="main-sidebar" class="sidebar left">
 			<button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
 			<nav id="navbar">
-				<div class="logo"><img src="http://localhost/www/_assets/img/avatar.jpg" alt="user" /></div>
+				<div class="logo"><img src="./img/avatar.jpg" alt="user" /></div>
 				<ul id="sidebar-list"></ul>
 			</nav>
 		</aside>
 		<main id="main" class="main">
 			<div class="container hero flex todo">
 				<header class="hero-content flex flex--col center">
-					<!-- <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
-					<h1>My Landing Page</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, amet!</p>
-					<a class="cta-btn" href="#more">Read More</a>
-					<button class="cta-btn" id="open">Sign Up</button> -->
 					<h1>todos</h1>
 					<form id="form">
 						<input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
@@ -41,8 +36,7 @@
 			</div>
 			<!-- <div id="more" class="container"></div> -->
 		</main>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script> -->
-		<script src="http://localhost/www/_third_party/markdown/showdown.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
 		<script src="./js/script.js"></script>
 		<script src="./js/note.js"></script>
 	</body>
