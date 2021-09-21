@@ -170,3 +170,9 @@ nav ul li.active a, nav ul li:hover a {
 .movies .movie:hover .overview {
 	transform: translateY(0);
 }
+
+@media (max-width: 500px){
+	.movies header {
+		flex-direction: column;
+	}
+}
