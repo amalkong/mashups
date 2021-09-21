@@ -203,3 +203,24 @@ nav ul li.active, nav ul li:hover {
 	margin-top: 20px;
 	width: 100%;
 }
+
+@media (max-width: 500px){
+	.form-wrapper{
+		width: 90%;
+		height: 90%;
+		overflow: auto;
+		padding: .5rem;
+	}
+	.form {
+	    padding: 1rem;
+	}
+	.register--form .form {
+	    padding: 0 0.5rem;
+	}
+	.register--form h2 {
+	    margin: auto;
+	}
+	.login--form .form-control {
+	    width: 100%;
+	}
+}
