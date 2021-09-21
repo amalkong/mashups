@@ -17,6 +17,10 @@ body {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 #main-sidebar {
 	z-index: 2;
     position: fixed;
@@ -407,5 +411,15 @@ input.visually-hidden:focus-within + label {outline:thin dotted;}
 	#main-sidebar .toggle {
 	    top: auto;
 	    bottom: 1em;
+	}
+	.hero-content {
+	    padding: .1rem .52rem;
+	    font-size: 100%;
+	}
+	.todo h1 {
+    	    font-size: 5rem;
+	}
+	.todo form {
+	    width: 100%;
 	}
 }
