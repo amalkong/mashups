@@ -3,9 +3,7 @@ const target = document.getElementById('notes-container')
 const toggleScrollable = document.getElementById('toggleScrollable')
 
 const notes = JSON.parse(localStorage.getItem('notes'))
-const marked = window['marked'] ? marked : function(str){
-	return (new Showdown.converter()).makeHtml(str)
-}
+
 if(notes) {
     notes.forEach(note => addNewNote(note))
 }
