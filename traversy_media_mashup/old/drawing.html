@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/drawing.css" />
+		<title>Traversy Media Mashups : Drawing App</title>
+	</head>
+	<body>
+		<aside id="main-sidebar" class="sidebar left">
+			<button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
+			<nav id="navbar">
+				<div class="logo"><img src="http://localhost/www/_assets/img/avatar.jpg" alt="user" /></div>
+				<ul id="sidebar-list"></ul>
+			</nav>
+		</aside>
+		<main id="main" class="main">
+			<div class="container hero flex">
+				<header>
+					<h1>Canvas Drawing App</h1>
+					<p>Down below is a canvas to test your artistic skills</p>
+					<a class="cta-btn" href="#more">Start Drawing</a>
+				</header>
+			</div>
+			<div id="more" class="container flex flex--col">
+				<div id="sketchpad" class="sketchpad">
+					<div id="" class="sketchpad__body">
+						<div class="canvas-wrapper">
+							<canvas id="canvas" width="800" height="540"></canvas>
+						</div>
+						<div id="" class="canvas-kit toggled">
+							<div class="dd">
+								<div class="dd-wrapper">
+									<input class="dd-checkbox" type="checkbox" name="dd-strokeShadow" id="dd-strokeShadow" />
+									<input class="dd-expander-checkbox" type="checkbox" name="dd-strokeShadow-expander" id="dd-strokeShadow-expander" />
+									<label class="dd-expander-btn" for="dd-strokeShadow-expander" style="z-index:9;position:absolute;top:0;right:0;padding:0.2em;padding: 0 0.2em;width:auto;border:1px dotted #ddd;">EX</label>
+									<label class="dd-btn" for="dd-strokeShadow">Stroke Shadow</label>
+									<div class="dd-content">
+										<span class="flex flex--between"><label for="shadowOffsetX">Shadow Offset X: </label><input id="shadowOffsetX" class="" type="number" name="shadowOffsetX" step="0.5" value="0" /></span>
+										<span class="flex flex--between"><label for="shadowOffsetY">Shadow Offset Y: </label><input id="shadowOffsetY" class="" type="number" name="shadowOffsetY" step="0.5" value="0" /></span>
+										<span class="flex flex--between"><label for="shadowBlur">Shadow Blur: </label><input id="shadowBlur" class="" type="number" name="shadowBlur" step="0.1" value="0" /></span>
+										<span class="flex flex--between"><label for="shadowColor">Shadow Color: </label><input id="shadowColor" class="" type="color" name="shadowColor" value="#09bdf4" /></span>
+										<span><canvas id="shadow-effect-canvas" width="100%" height="50" style="background-color: #fff;"></canvas></span>
+									</div>
+								</div>
+								<div class="dd-wrapper">
+									<input class="dd-checkbox" type="checkbox" name="dd-shapes" id="dd-shapes" />
+									<input class="dd-expander-checkbox" type="checkbox" name="dd-shapes-expander" id="dd-shapes-expander" />
+									<label class="dd-expander-btn" for="dd-shapes-expander" style="z-index:9;position:absolute;top:0;right:0;padding:0.2em;padding: 0 0.2em;width:auto;border:1px dotted #ddd;">EX</label>
+									<label class="dd-btn" for="dd-shapes">Shapes</label>
+									<div class="dd-content">
+										<div class="shapes-wrapper flex flex-even">
+											<div class="shape circle"></div>
+											<div class="shape square"></div>
+											<div class="shape star"></div>
+											<div class="shape polygon"></div>
+										</div>
+										<div class="shapes-tools">
+											<span class="flex flex--between"><label for="shapeWidth">Width: </label><input id="shapeWidth" class="" type="number" name="shapeWidth" step="1" value="10" /></span>
+											<span class="flex flex--between"><label for="shapeHeight">Height: </label><input id="shapeHeight" class="" type="number" name="shapeHeight" step="1" value="10" /></span>
+											<span class="flex flex--between"><label for="shapeSides">Sides: </label><input id="shapeSides" class="" type="number" name="shapeSides" step="1" value="1" /></span>
+										</div>
+										<div class="flex flex--center">
+											<button class="insert-shape"><i class="fa fa-shapes"></i></button>
+										</div>
+									</div>
+								</div>
+								<div class="dd-wrapper">
+									<input class="dd-checkbox" type="checkbox" name="dd-images" id="dd-images" />
+									<input class="dd-expander-checkbox" type="checkbox" name="dd-images-expander" id="dd-images-expander" />
+									<label class="dd-expander-btn" for="dd-images-expander" style="z-index:9;position:absolute;top:0;right:0;padding:0.2em;padding: 0 0.2em;width:auto;border:1px dotted #ddd;">EX</label>
+									<label class="dd-btn" for="dd-images">Images</label>
+									<div class="dd-content">
+										<div class="" >
+											<img id="dd-images-image" src="http://localhost/www/_assets/img/gallery/1.jpg" />
+										</div>
+										<div class="flex flex--center">
+											<button class="insert-image"><i class="fa fa-object-group"></i></button>
+											<button class="remove-image"><i class="fa fa-trash"></i></button>
+										</div>
+									</div>
+								</div>
+								<div class="dd-wrapper">
+									<input class="dd-checkbox" type="checkbox" name="dd-content99" id="dd-content99" />
+									<input class="dd-expander-checkbox" type="checkbox" name="dd-content99-expander" id="dd-content99-expander" />
+									<label class="dd-expander-btn" for="dd-content99-expander" style="z-index:9;position:absolute;top:0;right:0;padding:0.2em;padding: 0 0.2em;width:auto;border:1px dotted #ddd;">EX</label>
+									<label class="dd-btn" for="dd-content99">test</label>
+									<div class="dd-content">
+										<pre class="code-block" ><div>test content</div></pre>
+										<img id="dd-content99-image" src="http://localhost/www/_assets/img/gallery/1.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="toolbox">
+							<button id="canvas-kit-toggler" title="toggle canvas kit menu"><i class="fa fa-bars"></i></button>
+							<button id="increase" title="increase brush size">+</button>
+							<span id="size" title="current brush size">2</span>
+							<button id="decrease" title="decrease brush size">-</button>
+							<input type="color" id="color" title="change brush color">
+							<label for="image-file" class="button" title="add image to drawing"><i class="fa fa-upload"></i><input type="file" name="image-file" id="image-file" class="visually-hidden" /></label>
+							<input type="checkbox" id="use-image-height" title="use selected image dimensions as canvas dimensions?">
+							<button id="clear" title="clear canvas">X</button>
+						<!-- <div class="toolbox-inner">
+						</div>
+						<div class="toolbox-inner">
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./js/script.js"></script>
+		<script src="./js/drawing.js"></script>
+	</body>
+</html>

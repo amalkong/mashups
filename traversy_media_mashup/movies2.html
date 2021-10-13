@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/movies.css?_=322" />
+		<title>Movie App</title>
+	</head>
+	<body>
+		<aside id="main-sidebar" class="left">
+			<!-- <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button> -->	
+			<div class="logo"><img src="./img/avatar.jpg" alt="user" /></div>
+			<nav id="navbar">
+				<ul id="sidebar-list"></ul>
+			</nav>
+			<div class="main-sidebar-footer">
+			    <label class="slim-switch toggler" for="darkmode-toggler" title="toggle : background"><input type="checkbox" class="darkmode-toggler hidden--input visually-hidden" id="darkmode-toggler" name="darkmode-toggler" /><span class="switch-handle"></span></label>
+			</div>
+		</aside>
+		<main id="main" class="main snap-container">
+			<div class="container hero flex snap-section">
+				<header>
+					<h1>Movies App</h1>
+					<p>Down below is are a list of movies currently in theater as well as upcoming titles.</p>
+					<a class="cta-btn" href="#movies">View Listings</a>
+				</header>
+			</div>
+			<div id="movies" class="container flex flex--col movies snap-section overflow--auto">
+				<header class="flex flex--col">
+					<div class="flex">
+						<button id="toggle" class="toggle"><i class="fa fa-bars"></i></button>
+						<h2 id="category-display">Movie Listings</h2>
+						<form id="movies-search-form">
+							<input type="text" id="search" class="search" placeholder="Search">
+						</form>
+					</div>
+					<hr />
+					<nav class="flex">
+						<ul class="dropdown with--padding open--right" style="margin: auto;">
+							<li>
+								<div class="p--1 flex"><span>Home</span>&nbsp;<span class="ml--auto"><i class="fa fa-home"></i></span></div>
+								<ul>
+									<li><a href="../" target="_self"><i class="fa fa-globe"></i>&nbsp;main site</a></li>
+									<li><a href="../launcher.html" target="_self"><i class="fa fa-home"></i>&nbsp;launcher</a></li>
+									<li><a href="../api/index.html" target="_blank"><i class="fa fa-atom"></i>&nbsp;API</a></li>
+									<li><a href="index.html" target="_self" class="selected"><i class="fa fa-code-branch"></i>&nbsp;UI</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="p--1 flex"><span>Patterns</span>&nbsp;<span class="ml--auto"><i class="fa fa-chess-board"></i></span></div>
+								<!-- First level sub dropdown -->
+								<ul>
+									<li class="no--a">Layout</li>
+									<li class="no--a">Input</li>
+									<li class="no--a">
+										<div>Navigation</div>
+										<!-- Second level sub dropdown -->
+										<ul>
+											<li class="no--a">Breadcrumb</li>
+											<li class="no--a">Dropdown</li>
+											<li class="no--a">Menu</li>
+											<li class="no--a">Nested dropdown</li>
+										</ul>
+									</li>
+									<li class="no--a">Display</li>
+									<li class="no--a">Feedback</li>
+								</ul>
+							</li>
+							<li><a class="p--1" href="#/templates"><span>Templates</span>&nbsp;<span class="ml--auto"><i class="fa fa-clone"></i></span></a></li>
+							<li>
+								<div class="p--1 flex"><span>Info</span>&nbsp;<span class="ml--auto"><i class="fa fa-info-circle"></i></span></div>
+								<!-- First level sub dropdown -->
+								<ul>
+									<li class="no--"><a href="#about-modal-open">About</a></li>
+									<li class="no--"><a href="#contact-modal-open">Contact</a></li>
+									<li class="no--"><a href="#help-modal-open">Help</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+				<div id="movies-main"></div>
+
+				<footer id="footer">
+					<span id="pagination" class="pagination flex">
+						<span class="flex offset-right-5">
+							<button class="page-frag prev-page" title="show previous page"><i class="fa fa-chevron-left"></i></button>
+							<form id="pagination-form" class="offset-left-5 offset-right-5"><input class="pagination__input" type="text" value="" title="enter page number"></form>
+							<button class="page-frag next-page" title="show next page"><i class="fa fa-chevron-right"></i></button>
+						</span>
+						<span class="flex">
+							<select id="pagination__category" class="pagination__category">
+								<option value="tv">tv shows</option>
+								<option value="movie" selected>movie</option>
+							</select>
+							<select id="pagination__sortby" class="pagination__sortby" placeholder="String">
+								<!-- <option value=""></option>
+									<option value="popularity.asc">popularity.asc</option>
+									<option value="popularity.desc">popularity.desc</option>
+									<option value="release_date.asc">release_date.asc</option>
+									<option value="release_date.desc">release_date.desc</option>
+									<option value="revenue.asc">revenue.asc</option>
+									<option value="revenue.desc">revenue.desc</option>
+									<option value="primary_release_date.asc">primary_release_date.asc</option>
+									<option value="primary_release_date.desc">primary_release_date.desc</option>
+									<option value="original_title.asc">original_title.asc</option><option value="original_title.desc">original_title.desc</option>
+									<option value="vote_average.asc">vote_average.asc</option>
+									<option value="vote_average.desc">vote_average.desc</option>
+									<option value="vote_count.asc">vote_count.asc</option>
+									<option value="vote_count.desc">vote_count.desc</option>
+									<option></option> -->
+							</select>
+						</span>
+					</span>
+					<span class="pagination__info flex flex--center">
+						<small id="total-pages"></small>
+						<span> / </span>
+						<small id="total-results"></small>
+					</span>
+				</footer>
+			</div>
+			<div class="movie-modal" aria-labelledby="movie-modal-title" data-movie-display-template>
+				
+			</div>
+			
+		</main>
+		
+		<script type="text/javascript" src="./js/lib/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script><!--  -->
+		<script type="text/javascript" src="./js/movies.js"></script>
+	</body>
+</html>

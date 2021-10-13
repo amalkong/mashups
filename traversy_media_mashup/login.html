@@ -4,16 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Traversy Media Mashups : Login Page</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/login.css" />
-		<title>Traversy Media Mashups : Login Page</title>
+		<link rel="shortcut icon" href="./favicon.png" type="image/png" />
 	</head>
-	<body>
+	<body id="login-page">
+		<div class="floating-navbar">
+			<a href="#" onclick="window.history.go(-1);" title="go to previous page"><i class="fa fa-arrow-left"></i></a>
+			<a href="index.html" title="return to home page"><i class="fa fa-home"></i></a>
+		</div>
 		<aside id="main-sidebar" class="sidebar left">
 			<button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
 			<nav id="navbar">
-				<div class="logo"><img src="http://localhost/www/_assets/img/avatar.jpg" alt="user" /></div>
+				<div class="logo"><img src="./img/avatar.jpg" alt="user" /></div>
 				<ul id="sidebar-list"></ul>
 			</nav>
 		</aside>
@@ -69,7 +74,8 @@
 				</div>
 			</div>
 		</main>
-    <script type="text/javascript" src="./js/script.js"></script>
-    <script type="text/javascript" src="./js/login.js"></script>
-  </body>
+		<script type="text/javascript" src="./js/lib/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
+		<script type="text/javascript" src="./js/login.js"></script>
+	</body>
 </html>

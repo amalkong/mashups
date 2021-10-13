@@ -1,0 +1,178 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap'); */
+
+:root {
+	--primary-clr: #22254b;
+	--secondary-clr: #373b69;
+	--border-clr: rgba(200, 200, 200, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+nav ul li.active, nav ul li:hover {
+    background-color: var(--secondary-clr);
+}
+nav ul li.active a, nav ul li:hover a {
+    border-right-color: var(--border-clr);
+}
+#movies {
+  background: var(--primary-clr);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+.hero{
+	background-image: url(../img/night-the-city-apocalypse-the-building-wallpaper-preview.jpg);
+}
+.movies header {
+	/* z-index: 1;
+	position: sticky;
+	top: 0; */
+	padding: 1rem;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	background-color: var(--secondary-clr);
+}
+.movies header h2{margin: 0 auto;}
+.movies footer {
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+	margin-top: auto;
+    padding: 1rem;
+    background-color: var(--secondary-clr);
+}
+.movies footer button{
+	background-color: var(--primary-clr);
+	color: #fff;
+}
+.movies .pagination {}
+.movies .pagination .pages{}
+.movies .pagination .page{}
+.movies .pagination #pagination-form{
+	display: flex;
+	width: 20%;
+	padding: 0 0.3em;
+	margin: 0 5px;
+}
+.movies .pagination .pagination__input{
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+}
+.movies .pagination__info{
+    padding: 0 .25em;
+    margin-left: auto;
+    border-radius: 5px;
+    white-space: pre;
+	background-color: #fff;
+    color: #444;
+}
+
+.movies .search {
+	background-color: transparent;
+	border: 2px solid var(--primary-clr);
+	border-radius: 50px;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	color: #fff;
+}
+
+.movies .search::placeholder {
+	color: #7378c5;
+}
+
+.movies .search:focus {
+	outline: none;
+	background-color: var(--primary-clr);
+}
+
+.movies #movies-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 5em;
+}
+
+.movies .movie {
+	position: relative;
+	width: 300px;
+	margin: 1rem;
+	background-color: var(--secondary-clr);
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.movies .movie img {
+	width: 100%;
+}
+
+.movies .movie-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap:0.2rem;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+	color: #eee;
+}
+
+.movies .movie-info h3 {
+	margin-top: 0;
+}
+
+.movies .movie-info small {
+	background-color: var(--primary-clr);
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-size: small;
+	margin-top: 5px;
+}
+
+.movies .movie-info .popularity {
+	background-color: var(--primary-clr);
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.movies .movie-info .popularity.green {
+	color: lightgreen;
+}
+
+.movies .movie-info .popularity.orange {
+	color: orange;
+}
+
+.movies .movie-info .popularity.red {
+	color: red;
+}
+
+.movies .overview {
+	background-color: #fff;
+	padding: 2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	transform: translateY(101%);
+	overflow-y: auto;
+	transition: transform 0.3s ease-in;
+}
+
+.movies .movie:hover .overview {
+	transform: translateY(0);
+}
+
+@media (max-width: 500px){
+	.movies header {
+		flex-direction: column;
+	}
+}

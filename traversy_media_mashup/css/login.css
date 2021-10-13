@@ -88,14 +88,16 @@ nav ul li.active, nav ul li:hover {
 }
 
 .login--form .form-control input {
-	background-color: transparent;
-	border: 0;
-	border-bottom: 2px #fff solid;
-	display: block;
 	width: 100%;
 	padding: 10px 0;
+	background-color: transparent;
+	display: block;
+	border: 0;
+	border-bottom: 2px #fff solid;
+	border-radius: 0;
 	font-size: 18px;
 	color: #fff;
+	box-shadow: none;
 }
 
 .login--form .form-control input:focus,

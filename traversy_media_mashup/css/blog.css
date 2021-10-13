@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-:root {
+#container-group {
 	--modal-duration: 1s;
 	--primary-clr: #4992d3;
 	--primary-clr-alt: #4992d390;
@@ -8,46 +8,44 @@
 	--border-clr: rgba(200, 200, 200, 0.1);
 }
 
-* {
-  box-sizing: border-box;
+h1,h2 {
+	margin-bottom: 0;
+	text-align: center;
 }
-/* nav {
-	background-color: var(--primary-clr);
-	border-right: 2px solid var(--border-clr);
-} */
-#blog-container {
+/* nav {background-color: var(--primary-clr);border-right: 2px solid var(--border-clr);} */
+#blog-container, #snippet-container {
+	position: relative;
+	/* display: flex;flex-direction: column;align-items: center;justify-content: center;overflow: auto;padding-bottom: 100px;height: calc(100vh - 2rem); */
+	height: 100vh;
+	margin: 1rem 0;
 	background-color: var(--secondary-clr);
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
-	/* display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center; */
-	min-height: 100vh;
-	margin: 0;
-	padding-bottom: 100px;
+	border-radius: var(--radius);
 }
-
-h1 {
-	margin-bottom: 0;
-	text-align: center;
+#posts-container, #snippets-container {
+    height: calc(100vh - 2rem);
+	padding: 1rem 1rem 100px 2rem;
+    overflow: auto;
+	Scrollbar-width:thin;
 }
 .container p:not(.hero p){box-shadow: none;border: none;}
 .filter-container {
 	margin-top: 20px;
 	width: 80vw;
+	width: 100%;
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.filter {
+input.filter {
 	width: 100%;
 	padding: 12px;
 	font-size: 16px;
 }
 
-.post {
+.post,.snippet {
 	position: relative;
 	background-color: var(--primary-clr);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -58,21 +56,13 @@ h1 {
 	/* width: 80vw; */
 	max-width: 800px;
 }
-
-.post .post-title {
-	margin: 0;
-}
-
-.post .post-body {
+.post .post-title, .snippet .snippet-title {margin: 0;}
+.post .post-body, .snippet .snippet-body {
 	margin: 15px 0 0;
-  line-height: 1.3;
+	line-height: 1.3;
 }
-
-.post .post-info {
-	margin-left: 20px;
-}
-
-.post .number {
+.post .post-info, .snippet .snippet-info {margin-left: 20px;}
+.post .number, .snippet .number {
 	position: absolute;
 	top: -15px;
 	left: -15px;
@@ -87,20 +77,34 @@ h1 {
 	justify-content: center;
 	padding: 7px 10px;
 }
+.snippet .snippet-body ul li {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+.snippet .snippet-body ul li i {margin-right: 0.5rem;}
+.snippet .snippet-body ul li.sources a, .snippet .snippet-body ul li.url a {color:#ffd204;}
+.snippet .snippet-body ul li.tags, .snippet .snippet-body ul li.sources {flex-wrap:wrap;}
+.snippet .snippet-body ul li .tag, .snippet .snippet-body ul li .source {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin-right: 5px;
+	margin-bottom: 2px;
+}
+.snippet .snippet-body ul li .tag a {color: darkslateblue;}
+.snippet .snippet-body ul li.description p{padding:0;}
 
 .loader {
 	opacity: 0;
 	display: flex;
-	position: fixed;
+	position: absolute;
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	transition: opacity 0.3s ease-in;
 }
-
-.loader.show {
-	opacity: 1;
-}
+.loader.show {opacity: 1;}
 
 .circle {
 	background-color: #fff;
@@ -110,22 +114,20 @@ h1 {
 	margin: 5px;
 	animation: bounce 0.5s ease-in infinite;
 }
-
-.circle:nth-of-type(2) {
-	animation-delay: 0.1s;
-}
-
-.circle:nth-of-type(3) {
-	animation-delay: 0.2s;
-}
+.circle:nth-of-type(2) {animation-delay: 0.1s;}
+.circle:nth-of-type(3) {animation-delay: 0.2s;}
 
 @keyframes bounce {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
+	0%,100% {transform: translateY(0);}
+	50% {transform: translateY(-10px);}
+}
 
-	50% {
-		transform: translateY(-10px);
-	}
+@media (max-width: 500px) {
+	#posts-container, #snippets-container {padding: 1rem 1rem 50px 1.5rem;}
+	#blog-container h2, #snippets-container h2{margin-top: 0;}
+	.post{padding: 10px;margin: 20px auto 15px auto;}
+	.post .post-info {margin-left: 5px;}
+	.post .post-title{font-size: 20px;}
+	.post, .snippet {padding: 0.5rem;}
+	.post .post-info, .snippet .snippet-info {margin-left: 0.5rem;}
 }
